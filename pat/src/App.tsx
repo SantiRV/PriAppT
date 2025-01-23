@@ -36,12 +36,12 @@ const usersData = [
 
 interface UsersState {  
   users: Array<User>;
-  newUser: number;
+  newUser: Array<User>;
 }
 
 function App() {
   const [users, setUsers] = useState<UsersState["users"]>([]);
-  const [newUser, setNewUser] = useState<UsersState["newUser"]>(0);
+  const [onNewUser, setNewUser] = useState<UsersState["newUser"]>([])
 
   useEffect(() => {
     setUsers(usersData);
